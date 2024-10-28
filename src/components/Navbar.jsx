@@ -13,7 +13,7 @@ export function Navbar () {
 
   return (
     <>
-      <header className={`${isOpen ? 'w-20 transition-width duration-0 ease-in-out' : 'w-60 transition-width duration-200 ease-out'} h-full bg-light-background dark:bg-dark-background`}>
+      <header className={`${isOpen ? 'w-20' : 'w-60'} h-full bg-light-background dark:bg-dark-background`}>
         <nav className={`${isOpen ? 'items-center' : 'p-6'} h-full flex flex-col pt-10 gap-60`}>
           <div className='flex gap-4 items-center'>
             <NavbarToggle toggleMenu={toggleMenu} />

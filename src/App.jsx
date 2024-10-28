@@ -10,7 +10,7 @@ function App () {
 
   return (
     <>
-      <main className={`${darkMode ? '' : 'dark'} flex w-full h-full`}>
+      <main className={`${darkMode ? '' : 'dark'} flex w-full h-full transition-all duration-300`}>
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<Ladding />} />
