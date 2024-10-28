@@ -5,9 +5,9 @@ import { TextBlock } from '../components/TextBlock.jsx'
 export function Ladding () {
   return (
     <>
-      <Navbar />
-      <main className='flex justify-center w-full h-full bg-light-background dark:bg-dark-background'>
-        <section className='flex flex-col pt-20 w-3/4 gap-20'>
+      <main className='flex w-full h-full bg-gradient-to-r from-slate-300 to-slate-400 dark:from-slate-800 dark:to-slate-900'>
+        <Navbar />
+        <section className='flex flex-col justify-center ml-40 w-3/4 gap-20'>
           <article className='flex flex-col gap-10 bg-light-secondary/10 dark:bg-dark-secondary/10 rounded p-4'>
             <TextBlock
               title='Desafía y Mejora tus Conocimientos'

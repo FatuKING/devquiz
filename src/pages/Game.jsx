@@ -8,8 +8,8 @@ export function Game () {
 
   return (
     <>
-      <Navbar />
-      <main className='flex w-full h-full bg-light-background dark:bg-dark-background'>
+      <main className='flex w-full h-full bg-gradient-to-r from-slate-300 to-slate-400 dark:from-slate-800 dark:to-slate-900'>
+        <Navbar />
         <section className='flex justify-center items-center w-full'>
           {gameStarted ? null : <BtnStar />}
 

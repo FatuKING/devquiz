@@ -5,9 +5,9 @@ import { TextBlock } from '../components/TextBlock.jsx'
 export function Contact () {
   return (
     <>
-      <Navbar />
-      <main className='flex justify-center w-full h-full bg-light-background dark:bg-dark-background'>
-        <section className='flex flex-col pt-20 w-3/4 gap-20'>
+      <main className='flex w-full h-full bg-gradient-to-r from-slate-300 to-slate-400 dark:from-slate-800 dark:to-slate-900'>
+        <Navbar />
+        <section className='flex justify-center flex-col ml-40 w-3/4 gap-20'>
           <TextBlock
             title='¡¡Cuentas tu experiencia!!'
             text='Tu opinión es clave. Cuéntanos cómo ha sido tu experiencia utilizando DevQuiz.'
