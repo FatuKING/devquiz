@@ -25,7 +25,7 @@ export function Navbar () {
             <li className='text-3xl font-semibold'>
               <NavLink
                 to='/'
-                className={({ isActive }) => isActive ? 'flex gap-3 items-center text-light-accent dark:text-dark-accent' : 'flex gap-3 items-center  hover:text-light-accent hover:dark:text-dark-accent'}
+                className={({ isActive }) => isActive ? 'flex gap-3 items-center text-light-accent dark:text-purple-600' : 'flex gap-3 items-center  hover:text-light-accent hover:dark:text-purple-600'}
               >
                 <FaHome data-tooltip-id='home' data-tooltip-content='Inicio' data-tooltip-place='right' /> <span className={`${isOpen ? 'hidden' : 'block'}`}>Inicio</span>
                 {isOpen ? <Tooltip style={{ fontSize: '14px' }} id='home' /> : null}
@@ -35,7 +35,7 @@ export function Navbar () {
             <li className='text-3xl font-semibold'>
               <NavLink
                 to='/game'
-                className={({ isActive }) => isActive ? 'flex gap-3 items-center text-light-accent dark:text-dark-accent' : 'flex gap-3 items-center  hover:text-light-accent hover:dark:text-dark-accent'}
+                className={({ isActive }) => isActive ? 'flex gap-3 items-center text-light-accent dark:text-purple-600' : 'flex gap-3 items-center  hover:text-light-accent hover:dark:text-purple-600'}
               >
                 <IoGameController data-tooltip-id='game' data-tooltip-content='Jugar' data-tooltip-place='right' /> <span className={`${isOpen ? 'hidden' : 'block'}`}>Jugar</span>
                 {isOpen ? <Tooltip style={{ fontSize: '14px' }} id='game' /> : null}
@@ -45,7 +45,7 @@ export function Navbar () {
             <li className='text-3xl font-semibold'>
               <NavLink
                 to='/ranking'
-                className={({ isActive }) => isActive ? 'flex gap-3 items-center text-light-accent dark:text-dark-accent' : 'flex gap-3 items-center  hover:text-light-accent hover:dark:text-dark-accent'}
+                className={({ isActive }) => isActive ? 'flex gap-3 items-center text-light-accent dark:text-purple-600' : 'flex gap-3 items-center  hover:text-light-accent hover:dark:text-purple-600'}
               >
                 <FaClipboardList data-tooltip-id='ranking' data-tooltip-content='Ranking' data-tooltip-place='right' /> <span className={`${isOpen ? 'hidden' : 'block'}`}>Ranking</span>
                 {isOpen ? <Tooltip style={{ fontSize: '14px' }} id='ranking' /> : null}
@@ -55,7 +55,7 @@ export function Navbar () {
             <li className='text-3xl font-semibold'>
               <NavLink
                 to='/contact'
-                className={({ isActive }) => isActive ? 'flex gap-3 items-center text-light-accent dark:text-dark-accent' : 'flex gap-3 items-center  hover:text-light-accent hover:dark:text-dark-accent'}
+                className={({ isActive }) => isActive ? 'flex gap-3 items-center text-light-accent dark:text-purple-600' : 'flex gap-3 items-center  hover:text-light-accent hover:dark:text-purple-600'}
               >
                 <FaAddressBook data-tooltip-id='contact' data-tooltip-content='Contacto' data-tooltip-place='right' /> <span className={`${isOpen ? 'hidden' : 'block'}`}>Contacto</span>
                 {isOpen ? <Tooltip style={{ fontSize: '14px' }} id='contact' /> : null}

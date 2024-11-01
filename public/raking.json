@@ -1,0 +1,29 @@
+{
+  "ranking": [
+    {
+      "categoria": "cienciaDeDatos",
+      "puestos": [
+        { "puesto": 1, "usuario": "Juan", "puntos": 1500 },
+        { "puesto": 2, "usuario": "Ana", "puntos": 1400 },
+        { "puesto": 3, "usuario": "Pedro", "puntos": 1300 }
+      ]
+    },
+    {
+      "categoria": "diseñoWeb",
+      "puestos": [
+        { "puesto": 1, "usuario": "Lucía", "puntos": 1600 },
+        { "puesto": 2, "usuario": "Carlos", "puntos": 1550 },
+        { "puesto": 3, "usuario": "María", "puntos": 1480 }
+      ]
+    },
+    {
+      "categoria": "programacion",
+      "puestos": [
+        { "puesto": 1, "usuario": "David", "puntos": 1700 },
+        { "puesto": 2, "usuario": "Laura", "puntos": 1650 },
+        { "puesto": 3, "usuario": "Miguel", "puntos": 1600 }
+      ]
+    }
+  ]
+}
+      
