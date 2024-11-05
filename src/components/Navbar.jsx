@@ -18,7 +18,7 @@ export function Navbar () {
           <div className='flex gap-4 items-center'>
             <NavbarToggle toggleMenu={toggleMenu} />
 
-            <h1 className={`${isOpen ? 'hidden duration-0' : 'block'} text-4xl font-bold transition-all ease-in text-light-text dark:text-dark-text`}>DevQuiz</h1>
+            <h1 className={`${isOpen ? 'hidden duration-0' : 'block'} text-4xl font-bold transition-all ease-in text-light-text dark:text-dark-text uppercase`}>DevQuiz</h1>
           </div>
 
           <ul className='flex flex-col gap-4 text-light-text dark:text-dark-text'>

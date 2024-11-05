@@ -5,7 +5,7 @@ import { TextBlock } from '../components/TextBlock.jsx'
 export function Ladding () {
   return (
     <>
-      <main className='flex w-full h-full bg-gradient-to-r from-slate-200 to-slate-300 dark:from-slate-800 dark:to-slate-900'>
+      <main className='flex w-full h-full bg-gradient-to-r from-slate-200 to-slate-300 dark:from-slate-900 dark:to-slate-950'>
         <Navbar />
         <section className='flex flex-col justify-center ml-40 w-3/4 gap-20'>
           <article className='flex flex-col gap-10'>
@@ -14,7 +14,7 @@ export function Ladding () {
               text='DevQuiz es un juego interactivo de preguntas y respuestas diseñado para que desarrolladores de todos los niveles puedan aprender y mejorar sus habilidades de una manera divertida. Con preguntas sobre diversos temas de desarrollo, tendrás la oportunidad de desafiar tus conocimientos mientras juegas y aprendes.'
             />
 
-            <Link to='/game' className='bg-light-primary dark:bg-purple-800 hover:dark:bg-purple-800/90 hover:bg-light-accent rounded p-2 w-40 text-center font-semibold'>Empieza Ahora</Link>
+            <Link to='/game' className='bg-light-primary dark:bg-purple-800 hover:dark:bg-purple-800/90 hover:bg-light-accent rounded p-2 w-40 text-center font-semibold text-2xl'>Empieza Ahora</Link>
           </article>
 
           <article className='flex flex-col gap-10'>

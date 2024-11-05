@@ -5,7 +5,7 @@ import { TextBlock } from '../components/TextBlock.jsx'
 export function Contact () {
   return (
     <>
-      <main className='flex w-full h-full bg-gradient-to-r from-slate-200 to-slate-300 dark:from-slate-800 dark:to-slate-900'>
+      <main className='flex w-full h-full bg-gradient-to-r from-slate-200 to-slate-300 dark:from-slate-900 dark:to-slate-950'>
         <Navbar />
         <section className='flex justify-center flex-col ml-40 w-3/4 gap-20'>
           <TextBlock

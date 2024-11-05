@@ -5,8 +5,12 @@ export const useQuiz = create((set, get) => ({
   currentQuestion: {},
   indexCurrentQuestion: 0,
   correctAnswer: '',
-  points: '',
 
+  gameOver: true,
+  currentCategory: '',
+  correctQuestion: 0,
+  points: 0,
+  time: 5 * 60,
   loading: false,
   error: null,
   gameStarted: false,
@@ -31,6 +35,12 @@ export const useQuiz = create((set, get) => ({
   checkAnswer: (e, option) => {
     const { correctAnswer } = get()
 
+    e.preventDefault()
+
+    if (option === correctAnswer) {
+
+    }
+
     console.log(correctAnswer)
   },
 
@@ -46,5 +56,13 @@ export const useQuiz = create((set, get) => ({
         correctAnswer: nextCorrectAnswer
       })
     }
+  },
+
+  setTime: (newTime) => set((state) => ({
+    time: typeof newTime === 'function' ? newTime(state.time) : newTime
+  })),
+
+  setGameOver: () => {
+    set((state) => ({ gameOver: !state.gameOver, loading: true }))
   }
 }))
