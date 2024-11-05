@@ -5,7 +5,7 @@ import { TextBlock } from '../components/TextBlock.jsx'
 export function Ladding () {
   return (
     <>
-      <main className='flex w-full h-full bg-gradient-to-r from-slate-200 to-slate-300 dark:from-slate-900 dark:to-slate-950'>
+      <main className='flex w-full h-full bg-gradient-to-r from-slate-100 to-slate-300 dark:from-slate-900 dark:to-slate-950'>
         <Navbar />
         <section className='flex flex-col justify-center ml-40 w-3/4 gap-20'>
           <article className='flex flex-col gap-10'>

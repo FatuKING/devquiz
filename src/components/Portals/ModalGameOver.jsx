@@ -8,7 +8,10 @@ import { useQuiz } from '../../hooks/useQuiz'
 
 export function ModalGameOver () {
   const { darkMode } = useThemes()
-  const { correctQuestion, currentCategory, points, time, setGameOver } = useQuiz()
+  const { correctQuestion, currentCategory, time, setGameOver } = useQuiz()
+
+  const points = Math.ceil(time / 60) * 100 * correctQuestion
+  const usedTime = (300 - time)
 
   return createPortal(
     <>
@@ -32,7 +35,7 @@ export function ModalGameOver () {
 
                 <li className='flex justify-between items-center gap-2'>
                   <FaClock className='text-sky-600' />
-                  <span>{time}</span>
+                  <span>{usedTime}</span>
                 </li>
               </ul>
 

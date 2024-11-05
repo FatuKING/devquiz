@@ -10,18 +10,18 @@ export function Form () {
           <div className='flex gap-4 text-2xl'>
             <label className='flex flex-col gap-2' htmlFor=''>
               Nombre
-              <input className='p-2 rounded bg-transparent border-2  focus:outline-none' type='text' />
+              <input className='p-2 rounded bg-black/10 dark:bg-white/20 border-2 border-black/20 dark:border-white/20  focus:outline-none' type='text' />
             </label>
 
             <label className='flex flex-col gap-2' htmlFor=''>
               Email
-              <input className='p-2 rounded bg-transparent border-2  focus:outline-none' type='text' />
+              <input className='p-2 rounded bg-black/10 dark:bg-white/20 border-2 border-black/20 dark:border-white/20  focus:outline-none' type='text' />
             </label>
           </div>
 
           <label className='flex flex-col gap-2 text-2xl rounded' htmlFor=''>
             Mensaje
-            <textarea className='h-60 rounded p-2 bg-transparent border-2 focus:outline-none' id='message' />
+            <textarea className='h-60 rounded p-2 bg-black/10 dark:bg-white/20 border-2 border-black/20 dark:border-white/20 focus:outline-none' id='message' />
           </label>
 
           <input className='bg-purple-800 p-2 text-2xl cursor-pointer' type='submit' />

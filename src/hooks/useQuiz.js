@@ -6,12 +6,13 @@ export const useQuiz = create((set, get) => ({
   indexCurrentQuestion: 0,
   correctAnswer: '',
 
-  gameOver: true,
-  currentCategory: '',
-  correctQuestion: 0,
-  points: 0,
-  time: 5 * 60,
-  loading: false,
+  gameOver: false, // Si el juego finalizo
+  currentCategory: 'Frontend', // Nombre de la categoria actual
+  correctQuestion: 0, // Preguntas respondidas bien
+  selectedOption: '',
+  isCorrect: false,
+  time: 5 * 60, // Tiempo inicial
+  loading: false, 
   error: null,
   gameStarted: false,
   startGame: async () => {
@@ -21,7 +22,13 @@ export const useQuiz = create((set, get) => ({
       const response = await fetch('quiz.json')
       const data = await response.json()
 
-      set((state) => ({ quizs: data, currentQuestion: data[state.indexCurrentQuestion], correctAnswer: data[0].answer }))
+      set((state) => ({ 
+        quizs: data, 
+        currentQuestion: data[state.indexCurrentQuestion], 
+        correctAnswer: data[0].answer,
+        time: 5 * 60
+       }))
+
       console.log(data)
       console.log(data[0])
       console.log(data[0].answer)
@@ -32,16 +39,34 @@ export const useQuiz = create((set, get) => ({
     }
   },
 
-  checkAnswer: (e, option) => {
-    const { correctAnswer } = get()
-
-    e.preventDefault()
+  checkAnswer: (option) => {
+    const { correctAnswer, nextQuiz, indexCurrentQuestion, quizs, setGameOver } = get()
+   
 
     if (option === correctAnswer) {
-
+      set((state) => ({
+        selectedOption: option,
+        correctQuestion: state.correctQuestion + 1,
+        isCorrect: true
+      }))
+      
+      if(indexCurrentQuestion === quizs.length - 1){
+        setGameOver()
+      } else {
+        setTimeout(() => {
+          nextQuiz()
+        }, 1000)
+      }
+    } else {
+      set({ selectedOption: option, isCorrect: false})
+      if(indexCurrentQuestion >= quizs.length - 1){
+        setGameOver()
+      } else {
+        setTimeout(() => {
+          nextQuiz()
+        }, 1000)
+      }
     }
-
-    console.log(correctAnswer)
   },
 
   nextQuiz: () => {
@@ -54,15 +79,15 @@ export const useQuiz = create((set, get) => ({
         indexCurrentQuestion: nextIndex,
         currentQuestion: quizs[nextIndex],
         correctAnswer: nextCorrectAnswer
-      })
+      }) 
     }
   },
 
   setTime: (newTime) => set((state) => ({
-    time: typeof newTime === 'function' ? newTime(state.time) : newTime
+    time: newTime(state.time)
   })),
 
   setGameOver: () => {
-    set((state) => ({ gameOver: !state.gameOver, loading: true }))
+    set((state) => ({ gameOver: !state.gameOver, gameStarted: false, loading: true }))
   }
 }))
