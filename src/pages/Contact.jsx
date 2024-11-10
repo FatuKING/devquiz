@@ -9,7 +9,7 @@ export function Contact () {
         <Navbar />
         <section className='flex justify-center flex-col ml-40 w-3/4 gap-20'>
           <TextBlock
-            title='¡¡Cuentas tu experiencia!!'
+            title='¡¡Cuenta tu experiencia!!'
             text='Tu opinión es clave. Cuéntanos cómo ha sido tu experiencia utilizando DevQuiz.'
           />
 

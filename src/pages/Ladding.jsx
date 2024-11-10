@@ -14,7 +14,7 @@ export function Ladding () {
               text='DevQuiz es un juego interactivo de preguntas y respuestas diseñado para que desarrolladores de todos los niveles puedan aprender y mejorar sus habilidades de una manera divertida. Con preguntas sobre diversos temas de desarrollo, tendrás la oportunidad de desafiar tus conocimientos mientras juegas y aprendes.'
             />
 
-            <Link to='/game' className='bg-light-primary dark:bg-purple-800 hover:dark:bg-purple-800/90 hover:bg-light-accent rounded p-2 w-40 text-center font-semibold text-2xl'>Empieza Ahora</Link>
+            <Link to='/game' className='bg-purple-500 dark:bg-purple-800 hover:dark:bg-purple-900 hover:bg-purple-500/90 rounded p-2 w-40 text-center font-semibold text-xl'>Empieza Ahora</Link>
           </article>
 
           <article className='flex flex-col gap-10'>

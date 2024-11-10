@@ -1,7 +1,7 @@
-import { BtnStar } from '../components/BtnStar.jsx'
 import { Navbar } from '../components/Navbar.jsx'
 import { ModalGameOver } from '../components/Portals/modalGameOver.jsx'
 import { Question } from '../components/Question.jsx'
+import { SelectCategory } from '../components/SelectCategory.jsx'
 import { useQuiz } from '../hooks/useQuiz.js'
 
 export function Game () {
@@ -13,7 +13,16 @@ export function Game () {
         <Navbar />
         <section className='flex justify-center items-center w-full'>
 
-          {gameStarted ? <Question /> : <BtnStar />}
+          {gameStarted
+            ? <Question />
+            : <div className='flex flex-col gap-20'>
+              <h3 className='text-3xl text-purple-600'>Elija una categoría para comenzar</h3>
+              <div className='flex gap-20'>
+                <SelectCategory category='Ciencia de datos' description='Descubre el poder de los datos' />
+                <SelectCategory category='Programación' description='Desafía tu lógica y habilidades de codificación' />
+                <SelectCategory category='Diseño web' description='Explora los fundamentos del diseño web' />
+              </div>
+            </div>}
           {gameOver ? <ModalGameOver /> : null}
         </section>
       </main>

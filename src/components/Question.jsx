@@ -18,13 +18,15 @@ export function Question () {
           </section>
           <section className='grid grid-cols-2 gap-6 pt-32'>
             {currentQuestion.options.map((option, index) => (
-              <button 
-              key={index} 
-              onClick={() => checkAnswer(option)} 
-              className={`rounded-xl p-2 h-16 text-xl 
+              <button
+                key={index}
+                onClick={() => checkAnswer(option)}
+                className={`rounded-xl p-2 h-16 text-xl 
                 ${selectedOption === option && isCorrect === true ? 'bg-emerald-500 dark:bg-emerald-800' : ''}
                 ${selectedOption === option && isCorrect === false ? 'bg-red-500 dark:bg-red-800' : ''}
-                ${selectedOption !== option ? 'bg-black/10 border-black/20 dark:bg-white/10 border dark:border-white/20' : ''}`}>{option}</button>
+                ${selectedOption !== option ? 'bg-black/10 border-black/20 dark:bg-white/10 border dark:border-white/20' : ''}`}
+              >{option}
+              </button>
             ))}
           </section>
           </article>}

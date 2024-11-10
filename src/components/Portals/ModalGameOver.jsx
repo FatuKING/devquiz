@@ -1,41 +1,49 @@
 import { createPortal } from 'react-dom'
-import { MdOutlineReplay } from 'react-icons/md'
-import { FaClock, FaCircleInfo } from 'react-icons/fa6'
-import { FaCheckCircle } from 'react-icons/fa'
-import { IoIosPlay } from 'react-icons/io'
 import { useThemes } from '../../hooks/useThemes'
 import { useQuiz } from '../../hooks/useQuiz'
 
 export function ModalGameOver () {
   const { darkMode } = useThemes()
-  const { correctQuestion, currentCategory, time, setGameOver } = useQuiz()
+  const { correctQuestion, currentCategory, time, resetGame } = useQuiz()
 
-  const points = Math.ceil(time / 60) * 100 * correctQuestion
   const usedTime = (300 - time)
+  const prueba = 1 - ((usedTime / 60) / 10)
+  const points = Math.ceil(correctQuestion * 50000 * prueba)
+
+  const minutos = Math.floor(usedTime / 60)
+  const segundos = usedTime % 60
+
+  const styleSuccesses = correctQuestion < 6 ? 'text-red-500' : correctQuestion > 15 ? 'text-esmerald-500' : 'text-yellow-500'
+
+  const styleTime = usedTime > 150
+    ? 'text-red-500'
+    : usedTime > 240
+      ? 'text-yellow-500'
+      : 'text-emerald-500'
 
   return createPortal(
     <>
       <main className={`${darkMode ? '' : 'dark'} w-screen h-screen absolute`}>
-        <div className='w-full h-full bg-gradient-to-r from-slate-200 to-slate-300 dark:from-slate-900 dark:to-slate-950 flex items-center justify-center'>
-          <article className='grid grid-rows-4 grid-cols-4 gap-4'>
-            <section className='row-start-1 row-end-4 col-span-4 gap-6 border flex flex-col justify-center items-center text-2xl p-4 rounded'>
+        <div className='w-full h-full bg-gradient-to-r from-slate-200 to-slate-300 dark:from-slate-900 dark:to-slate-950 flex items-center justify-center text-light-text dark:text-dark-text'>
+          <article className='flex flex-col'>
+            <section className='flex flex-col gap-8 items-center text-2xl p-4 rounded'>
 
-              <h4 className='text-4xl'>Game Over</h4>
+              <h4 className='text-5xl'>Game Over</h4>
 
-              <ul className='flex justify-around w-full text-2xl'>
-                <li className='flex justify-between items-center  gap-2'>
-                  <FaCircleInfo className='text-sky-600' />
-                  <span>{currentCategory}</span>
+              <ul className='flex gap-8 w-full text-3xl'>
+                <li className='flex gap-2'>
+                  Categoria:
+                  <span className='text-purple-500'>{currentCategory}</span>
                 </li>
 
-                <li className='flex justify-between items-center gap-2'>
-                  <FaCheckCircle className='text-sky-600' />
-                  <span>{correctQuestion}</span>
+                <li className='flex gap-2'>
+                  Aciertos:
+                  <span className={styleSuccesses}>{correctQuestion}</span>
                 </li>
 
-                <li className='flex justify-between items-center gap-2'>
-                  <FaClock className='text-sky-600' />
-                  <span>{usedTime}</span>
+                <li className='flex gap-2'>
+                  Tiempo:
+                  <span className={styleTime}>{`${String(minutos).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`}</span>
                 </li>
               </ul>
 
@@ -44,23 +52,18 @@ export function ModalGameOver () {
                   Puntuación
                 </li>
 
-                <li>
+                <li className='text-5xl'>
                   {points}
                 </li>
               </ul>
-
-              <div className='flex gap-2 text-4xl'>
-                <button className='bg-sky-600 rounded-lg p-1' onClick={() => setGameOver()}><MdOutlineReplay /></button>
-                <button className='bg-sky-600 rounded-lg p-1'><IoIosPlay /></button>
-              </div>
             </section>
 
-            <form action='' className='border row-start-4 col-span-4 p-4 rounded text-2xl'>
+            <form action='' className='text-2xl pt-4'>
               <label htmlFor='' className='col-span-4'>
-                <input className='p-2 w-2/3 bg-transparent border border-r-0 focus:outline-none' type='text' placeholder='Nombre de usuarios' />
+                <input className='p-2 w-2/3 bg-white/30 dark:bg-black/30 focus:outline-none' type='text' placeholder='Nombre de usuarios' />
               </label>
 
-              <button className='p-2 w-1/3 bg-sky-600 border border-sky-600' type='submit'>
+              <button className='p-2 w-1/3 uppercase bg-purple-700' type='submit'>
                 Registar
               </button>
             </form>
