@@ -11,8 +11,8 @@ export function Ranking () {
     <>
       <main className='flex w-full h-full bg-gradient-to-r from-slate-100 to-slate-300 dark:from-slate-900 dark:to-slate-950'>
         <Navbar />
-        <section className='flex flex-col justify-center ml-40 w-3/4 gap-20'>
-          <article className='bg-white/30 dark:bg-black/30 dark:text-dark-text text-light-text rounded-lg p-8 w-3/4 h-5/6 shadow shadow-black'>
+        <section className='flex flex-col justify-center ml-40 items-center w-3/4 gap-20'>
+          <article className='bg-white/30 dark:bg-black/30 dark:text-dark-text text-light-text rounded-lg p-8 w-3/4 h-5/6 shadow-sm shadow-black dark:shadow-purple-800'>
             <div className='flex justify-between'>
               <h1 className='flex items-center gap-2 text-3xl font-semibold'><GiTrophyCup /> Ranking</h1>
 

@@ -10,18 +10,18 @@ export function Form () {
           <div className='flex gap-4 text-xl'>
             <label className='flex flex-col gap-2' htmlFor=''>
               Nombre
-              <input className='p-2 rounded dark:text-dark-text text-light-text bg-white/30 dark:bg-black/30 focus:outline-none shadow shadow-black' type='text' />
+              <input className='p-2 rounded dark:text-dark-text text-light-text bg-white/30 dark:bg-black/30 focus:outline-none shadow-sm shadow-black dark:shadow-purple-800' type='text' />
             </label>
 
             <label className='flex flex-col gap-2' htmlFor=''>
               Email
-              <input className='p-2 rounded dark:text-dark-text text-light-text bg-white/30 dark:bg-black/30 focus:outline-none shadow shadow-black' type='text' />
+              <input className='p-2 rounded dark:text-dark-text text-light-text bg-white/30 dark:bg-black/30 focus:outline-none shadow-sm shadow-black dark:shadow-purple-800' type='text' />
             </label>
           </div>
 
           <label className='flex flex-col gap-2 text-xl rounded' htmlFor=''>
             Mensaje
-            <textarea className='h-60 rounded p-2 dark:text-dark-text text-light-text bg-white/30 dark:bg-black/30 focus:outline-none shadow shadow-black' id='message' />
+            <textarea className='h-60 rounded p-2 dark:text-dark-text text-light-text bg-white/30 dark:bg-black/30 focus:outline-none shadow-sm shadow-black dark:shadow-purple-800' id='message' />
           </label>
 
           <input className='bg-purple-500 dark:bg-purple-800 p-2 text-xl font-semibold cursor-pointer' type='submit' />

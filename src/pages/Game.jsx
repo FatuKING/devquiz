@@ -1,5 +1,5 @@
 import { Navbar } from '../components/Navbar.jsx'
-import { ModalGameOver } from '../components/Portals/modalGameOver.jsx'
+import { ModalGameOver } from '../components/Portals/ModalGameOver.jsx'
 import { Question } from '../components/Question.jsx'
 import { SelectCategory } from '../components/SelectCategory.jsx'
 import { useQuiz } from '../hooks/useQuiz.js'

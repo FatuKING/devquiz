@@ -67,7 +67,7 @@ export const useQuiz = create((set, get) => ({
       } else {
         setTimeout(() => {
           nextQuiz()
-        }, 1000)
+        }, 2000)
       }
     }
   },

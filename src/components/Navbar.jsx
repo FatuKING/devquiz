@@ -4,21 +4,17 @@ import { IoGameController } from 'react-icons/io5'
 import { MdDarkMode, MdLightMode } from 'react-icons/md'
 import { NavbarToggle } from './NavbarToggle.jsx'
 import { Tooltip } from 'react-tooltip'
-import { useNavStore } from '../hooks/useNavStore.js'
 import { useThemes } from '../hooks/useThemes.js'
 
 export function Navbar () {
-  const { isOpen, toggleMenu } = useNavStore()
   const { modeSwitch, darkMode } = useThemes()
 
   return (
     <>
-      <header className={`${isOpen ? 'w-20' : 'w-60'} h-full bg-transparent`}>
-        <nav className={`${isOpen ? 'items-center' : 'p-6'} h-full flex flex-col pt-10 gap-60`}>
+      <header className='w-20 h-full bg-transparent'>
+        <nav className='items-center p-6 h-full flex flex-col pt-10 gap-60'>
           <div className='flex gap-4 items-center'>
-            <NavbarToggle toggleMenu={toggleMenu} />
-
-            <h1 className={`${isOpen ? 'hidden duration-0' : 'block'} text-2xl font-bold transition-all ease-in text-light-text dark:text-dark-text uppercase`}>DevQuiz</h1>
+            <NavbarToggle />
           </div>
 
           <ul className='flex flex-col gap-4 text-2xl text-light-text dark:text-dark-text'>
@@ -27,8 +23,8 @@ export function Navbar () {
                 to='/'
                 className={({ isActive }) => isActive ? 'flex gap-3 items-center text-purple-500 dark:text-purple-800' : 'flex gap-3 items-center  hover:text-purple-500 hover:dark:text-purple-800'}
               >
-                <FaHome className='text-3xl' data-tooltip-id='home' data-tooltip-content='Inicio' data-tooltip-place='right' /> <span className={`${isOpen ? 'hidden' : 'block'}`}>Inicio</span>
-                {isOpen ? <Tooltip style={{ fontSize: '14px' }} id='home' /> : null}
+                <FaHome className='text-3xl' data-tooltip-id='home' data-tooltip-content='Inicio' data-tooltip-place='right' />
+                <Tooltip style={{ fontSize: '16px' }} id='home' />
               </NavLink>
             </li>
 
@@ -37,8 +33,8 @@ export function Navbar () {
                 to='/game'
                 className={({ isActive }) => isActive ? 'flex gap-3 items-center text-purple-500 dark:text-purple-800' : 'flex gap-3 items-center  hover:text-purple-500 hover:dark:text-purple-800'}
               >
-                <IoGameController className='text-3xl' data-tooltip-id='game' data-tooltip-content='Jugar' data-tooltip-place='right' /> <span className={`${isOpen ? 'hidden' : 'block'}`}>Jugar</span>
-                {isOpen ? <Tooltip style={{ fontSize: '14px' }} id='game' /> : null}
+                <IoGameController className='text-3xl' data-tooltip-id='game' data-tooltip-content='Jugar' data-tooltip-place='right' />
+                <Tooltip style={{ fontSize: '16px' }} id='game' />
               </NavLink>
             </li>
 
@@ -47,8 +43,8 @@ export function Navbar () {
                 to='/ranking'
                 className={({ isActive }) => isActive ? 'flex gap-3 items-center text-purple-500 dark:text-purple-800' : 'flex gap-3 items-center  hover:text-purple-500 hover:dark:text-purple-800'}
               >
-                <FaClipboardList className='text-3xl' data-tooltip-id='ranking' data-tooltip-content='Ranking' data-tooltip-place='right' /> <span className={`${isOpen ? 'hidden' : 'block'}`}>Ranking</span>
-                {isOpen ? <Tooltip style={{ fontSize: '14px' }} id='ranking' /> : null}
+                <FaClipboardList className='text-3xl' data-tooltip-id='ranking' data-tooltip-content='Ranking' data-tooltip-place='right' />
+                <Tooltip style={{ fontSize: '16px' }} id='ranking' />
               </NavLink>
             </li>
 
@@ -57,8 +53,8 @@ export function Navbar () {
                 to='/contact'
                 className={({ isActive }) => isActive ? 'flex gap-3 items-center text-purple-500 dark:text-purple-800' : 'flex gap-3 items-center  hover:text-purple-500 hover:dark:text-purple-800'}
               >
-                <FaAddressBook className='text-3xl' data-tooltip-id='contact' data-tooltip-content='Contacto' data-tooltip-place='right' /> <span className={`${isOpen ? 'hidden' : 'block'}`}>Contacto</span>
-                {isOpen ? <Tooltip style={{ fontSize: '14px' }} id='contact' /> : null}
+                <FaAddressBook className='text-3xl' data-tooltip-id='contact' data-tooltip-content='Contacto' data-tooltip-place='right' />
+                <Tooltip style={{ fontSize: '16px' }} id='contact' />
               </NavLink>
             </li>
           </ul>

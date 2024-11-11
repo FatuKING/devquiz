@@ -5,7 +5,7 @@ export function SelectCategory ({ category, description }) {
 
   return (
     <>
-      <article className='flex flex-col justify-between border h-80 w-80 rounded-md p-6 hover:scale-105 text-light-text dark:text-dark-text bg-white/30 border-white/40 dark:bg-black/30 dark:border-black/40 shadow shadow-black'>
+      <article className='flex flex-col justify-between border h-80 w-80 rounded-md p-6 hover:scale-105 text-light-text dark:text-dark-text bg-white/30 border-white/40 dark:bg-black/30 dark:border-black/40 shadow-sm shadow-black dark:border-purple-800'>
         <section className='flex flex-col gap-8'>
           <h3 className='text-2xl text-purple-600'>{category}</h3>
 
