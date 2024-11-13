@@ -11,13 +11,11 @@ export function Navbar () {
 
   return (
     <>
-      <header className='w-20 h-full bg-transparent'>
-        <nav className='items-center p-6 h-full flex flex-col pt-10 gap-60'>
-          <div className='flex gap-4 items-center'>
-            <NavbarToggle />
-          </div>
+      <header className='w-full h-20 lg:w-20 lg:h-full bg-transparent'>
+        <nav className='flex lg:flex-col justify-between items-center p-6 lg:pt-10 lg:gap-60'>
+          <NavbarToggle />
 
-          <ul className='flex flex-col gap-4 text-2xl text-light-text dark:text-dark-text'>
+          <ul className='flex lg:flex-col gap-4 text-2xl text-light-text dark:text-dark-text'>
             <li className='font-semibold'>
               <NavLink
                 to='/'
