@@ -36,3 +36,19 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+@media (max-width: 1024px) {
+  #root{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+  }
+}
+
+@media (max-width: 640px) {
+  #root{
+    width: 100vw;
+    height: 1050px;
+    position: absolute;
+  }
+}

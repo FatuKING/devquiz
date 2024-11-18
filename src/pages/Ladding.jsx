@@ -5,10 +5,10 @@ import { TextBlock } from '../components/TextBlock.jsx'
 export function Ladding () {
   return (
     <>
-      <main className='flex w-full min-h-screen bg-gradient-to-r from-slate-100 to-slate-300 dark:from-slate-900 dark:to-slate-950'>
+      <main className='flex flex-col gap-10 lg:gap-0 lg:flex-row w-full h-full bg-gradient-to-r from-slate-100 to-slate-300 dark:from-slate-900 dark:to-slate-950'>
         <Navbar />
-        <section className='flex flex-col justify-center items-center ml-80 w-3/4'>
-          <article className='flex flex-col justify-center items-center gap-20 w-full'>
+        <section className='flex justify-center items-center lg:w-full'>
+          <article className='flex flex-col justify-center items-center gap-20 w-11/12 lg:w-3/4'>
             <section className='flex flex-col gap-10'>
               <TextBlock
                 title='Desafía y Mejora tus Conocimientos'
@@ -16,7 +16,7 @@ export function Ladding () {
               />
               <Link
                 to='/game'
-                className='bg-purple-500 dark:bg-purple-800 hover:dark:bg-purple-900 hover:bg-purple-500/90 rounded p-2 w-40 text-center font-semibold text-xl'
+                className='bg-purple-500 dark:bg-purple-800 hover:dark:bg-purple-900 hover:bg-purple-500/90 rounded p-1 md:p-2 w-40 text-center font-semibold text-lg md:text-xl'
               >
                 Empieza Ahora
               </Link>

@@ -3,9 +3,30 @@
     {
       "categoria": "cienciaDeDatos",
       "puestos": [
-        { "puesto": 1, "usuario": "Juan", "puntos": 1500 },
-        { "puesto": 2, "usuario": "Ana", "puntos": 1400 },
-        { "puesto": 3, "usuario": "Pedro", "puntos": 1300 }
+        { "puesto": 1, "usuario": "Juan", "puntos": 15000 },
+        { "puesto": 2, "usuario": "Ana", "puntos": 9900 },
+        { "puesto": 3, "usuario": "Pedro", "puntos": 9000 },
+        { "puesto": 4, "usuario": "Juan", "puntos": 8800 },
+        { "puesto": 5, "usuario": "Ana", "puntos": 7700 },
+        { "puesto": 6, "usuario": "Pedro", "puntos": 7000 },
+        { "puesto": 7, "usuario": "Juan", "puntos": 6500 },
+        { "puesto": 8, "usuario": "Ana", "puntos": 5500 },
+        { "puesto": 9, "usuario": "Pedro", "puntos": 5000 },
+        { "puesto": 10, "usuario": "Juan", "puntos": 4000 },
+        { "puesto": 11, "usuario": "Ana", "puntos": 2200 },
+        { "puesto": 12, "usuario": "Pedro", "puntos": 1950 },
+        { "puesto": 13, "usuario": "Juan", "puntos": 1850 },
+        { "puesto": 14, "usuario": "Ana", "puntos": 1600 },
+        { "puesto": 15, "usuario": "Pedro", "puntos": 1600 },
+        { "puesto": 16, "usuario": "Juan", "puntos": 1500 },
+        { "puesto": 17, "usuario": "Ana", "puntos": 1430 },
+        { "puesto": 18, "usuario": "Pedro", "puntos": 1299 },
+        { "puesto": 19, "usuario": "Juan", "puntos": 1255 },
+        { "puesto": 20, "usuario": "Ana", "puntos": 1230 },
+        { "puesto": 21, "usuario": "Pedro", "puntos": 1220 },
+        { "puesto": 22, "usuario": "Juan", "puntos": 1150 },
+        { "puesto": 23, "usuario": "Ana", "puntos": 1100 },
+        { "puesto": 24, "usuario": "Pedro", "puntos": 1000 }
       ]
     },
     {
