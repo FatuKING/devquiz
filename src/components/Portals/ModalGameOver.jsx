@@ -71,7 +71,7 @@ export function ModalGameOver () {
         </div>
       </main>
     </>,
-    document.getElementById('portals')
+    document.body
 
   )
 }
