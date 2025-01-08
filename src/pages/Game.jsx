@@ -9,7 +9,7 @@ export function Game () {
 
   return (
     <>
-      <main className='flex flex-col gap-10 lg:gap-0 lg:flex-row w-full h-full bg-gradient-to-r from-slate-100 to-slate-300 dark:from-slate-900 dark:to-slate-950'>
+      <main className='flex flex-col gap-10 w-full h-full bg-light-background dark:bg-dark-background'>
         <Navbar />
         <section className='flex justify-center items-center w-full'>
           <article className='flex justify-center items-center w-11/12 2xl:w-3/4'>

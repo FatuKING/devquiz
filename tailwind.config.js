@@ -8,18 +8,19 @@ export const theme = {
   extend: {
     colors: {
       dark: {
-        text: '#ebebeb',
-        background: '#161717',
-        primary: '#33a9c7',
-        secondary: '#6fdbfb',
-        accent: '#3dcfff'
+        paragraph: '#94a1b2',
+        background: '#16161a',
+        title: '#fffffe',
+        button: '#7f5af0',
+        buttonText: '#fffffe',
+        card: '#242629'
       },
       light: {
-        text: '#141414',
-        background: '#F1F1EE',
-        primary: '#38aecc',
-        secondary: '#046f90',
-        accent: '#0091c2'
+        paragraph: '#2b2c34',
+        background: '#fffffe',
+        title: '#2b2c34',
+        button: '#6246ea',
+        buttonText: '#fffffe'
       }
     }
   }

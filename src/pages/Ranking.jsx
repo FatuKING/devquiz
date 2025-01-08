@@ -9,7 +9,7 @@ export function Ranking () {
 
   return (
     <>
-      <main className='flex flex-col lg:flex-row w-full h-full bg-gradient-to-r from-slate-100 to-slate-300 dark:from-slate-900 dark:to-slate-950'>
+      <main className='flex flex-col w-full h-full bg-light-background dark:bg-dark-background'>
         <Navbar />
         <section className='flex justify-center items-center lg:w-full'>
           <article className='bg-white/30 dark:bg-black/30 dark:text-dark-text text-light-text rounded-lg p-8 pb-0 w-10/12 sm:w-11/12 lg:w-3/4 h-full lg:h-5/6 shadow-sm shadow-black dark:shadow-purple-800'>
