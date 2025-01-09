@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Navbar } from '../components/Navbar.jsx'
 import { TextBlock } from '../components/TextBlock.jsx'
+import { Footer } from '../components/Footer.jsx'
 
 export function Ladding () {
   return (
@@ -8,7 +9,7 @@ export function Ladding () {
       <main className='flex flex-col gap-10 w-full h-full bg-light-background dark:bg-dark-background'>
         <Navbar />
         <section className='flex justify-center items-center lg:w-full'>
-          <article className='flex flex-col justify-center items-center gap-20 w-11/12 lg:w-3/4'>
+          <article className='flex flex-col justify-center items-center gap-20 w-11/12'>
             <section className='flex flex-col gap-10'>
               <TextBlock
                 title='Desafía y Mejora tus Conocimientos'
@@ -30,6 +31,7 @@ export function Ladding () {
             />
           </article>
         </section>
+        <Footer />
       </main>
 
     </>

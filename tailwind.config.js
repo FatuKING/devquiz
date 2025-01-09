@@ -10,6 +10,7 @@ export const theme = {
       dark: {
         paragraph: '#94a1b2',
         background: '#16161a',
+        bgSecondary: '#242629',
         title: '#fffffe',
         button: '#7f5af0',
         buttonText: '#fffffe',
@@ -18,6 +19,7 @@ export const theme = {
       light: {
         paragraph: '#2b2c34',
         background: '#fffffe',
+        bgSecondary: '#d1d1e9',
         title: '#2b2c34',
         button: '#6246ea',
         buttonText: '#fffffe'

@@ -5,7 +5,7 @@ export function SelectCategory () {
   return (
     <>
       <div className='flex flex-col gap-10 w-full'>
-        <h3 className='text-2xl md:text-3xl text-purple-600'>
+        <h3 className='text-2xl md:text-3xl text-light-title font-medium dark:text-dark-title'>
           Elija una categoría para comenzar
         </h3>
         <div className='overflow-x-auto overflow-y-hidden h-[410px] p-4'>

@@ -1,3 +1,4 @@
+import { Footer } from '../components/Footer.jsx'
 import { Form } from '../components/Form.jsx'
 import { Navbar } from '../components/Navbar.jsx'
 import { TextBlock } from '../components/TextBlock.jsx'
@@ -18,6 +19,7 @@ export function Contact () {
           </div>
 
         </section>
+        <Footer />
       </main>
     </>
   )
