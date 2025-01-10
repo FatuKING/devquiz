@@ -3,7 +3,10 @@ import { useReducer, useEffect } from 'react'
 const initialState = {
   ranking: [],
   currentCategory: 'cienciaDeDatos',
-  loading: false
+  loading: false,
+  topCategoryOne: [{usuario: 'Facundo', puntos: 3000}, {usuario: 'Facundo', puntos: 2000}, {usuario: 'Facundo', puntos: 1000}],
+  topCategoryTwo: [],
+  topCategoryThree: []
 }
 
 const reducer = (state, action) => {
