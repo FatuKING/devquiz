@@ -8,7 +8,7 @@ export function SelectCategory () {
         <h3 className='text-2xl md:text-3xl text-light-title font-medium dark:text-dark-title'>
           Elija una categoría para comenzar
         </h3>
-        <div className='overflow-x-auto overflow-y-hidden h-[410px] p-4'>
+        <div className='overflow-x-auto overflow-y-hidden h-[410px]'>
           <div className='flex justify-between scrollbar-hide whitespace-pre lg:w-full w-[900px]'>
             <CardCategory
               category='Ciencia de datos'

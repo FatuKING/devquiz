@@ -5,10 +5,10 @@ export function CardCategory ({ category, description, icon }) {
 
   return (
     <>
-      <article className='flex flex-col justify-between p-4 rounded-md hover:scale-105 bg-light-bgSecondary dark:bg-dark-bgSecondary'>
+      <article className='group flex flex-col justify-between p-4 rounded-md bg-light-bgSecondary dark:bg-dark-bgSecondary'>
         <section className='flex flex-col gap-4 h-[300px] lg:h-[280px] w-[240px] xl:w-[260px] 2xl:w-[300px]'>
           <div className='flex flex-col gap-6'>
-            <div className='text-5xl'>
+            <div className='group-hover:scale-105 text-5xl'>
               {icon}
             </div>
 

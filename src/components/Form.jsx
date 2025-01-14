@@ -33,15 +33,15 @@ export function Form () {
             </li>
 
             <li className='flex gap-2 text-xl items-center'>
-              <FaPhoneAlt className='text-light-button dark:text-dark-button' /> <a className='hover:underline text-light-paragraph dark:text-dark-paragraph' href=''>+54 9 1155709631</a>
+              <FaPhoneAlt className='text-light-button dark:text-dark-button' /> <a className='hover:underline text-light-paragraph dark:text-dark-paragraph' href='phone:+5491155709631'>+54 9 1155709631</a>
             </li>
 
             <li className='flex flex-col gap-4'>
               Social:
               <div className='flex gap-4'>
-                <a href='' className='bg-light-button dark:bg-dark-button p-2 rounded-full text-2xl hover:scale-105' target='_blank'><PiGithubLogoFill className='text-light-buttonText dark:text-dark-buttonText' /></a>
-                <a href='' className='bg-light-button dark:bg-dark-button p-2 rounded-full text-2xl hover:scale-105' target='_blank'><GrLinkedinOption className='text-light-buttonText dark:text-dark-buttonText' /></a>
-                <a href='' className='bg-light-button dark:bg-dark-button p-2 rounded-full text-2xl hover:scale-105' target='_blank'><IoMdPerson className='text-light-buttonText dark:text-dark-buttonText' /></a>
+                <a href='https://github.com/fatuking/' className='bg-light-button dark:bg-dark-button p-2 rounded-full text-2xl hover:scale-105' target='_blank'><PiGithubLogoFill className='text-light-buttonText dark:text-dark-buttonText' /></a>
+                <a href='https://www.linkedin.com/in/facundocozzani/' className='bg-light-button dark:bg-dark-button p-2 rounded-full text-2xl hover:scale-105' target='_blank'><GrLinkedinOption className='text-light-buttonText dark:text-dark-buttonText' /></a>
+                <a href='https://www.cozzanifacundo.com/' className='bg-light-button dark:bg-dark-button p-2 rounded-full text-2xl hover:scale-105' target='_blank'><IoMdPerson className='text-light-buttonText dark:text-dark-buttonText' /></a>
               </div>
             </li>
           </ul>
