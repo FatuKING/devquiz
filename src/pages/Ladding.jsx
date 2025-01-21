@@ -8,7 +8,7 @@ export function Ladding () {
     <>
       <main className='flex flex-col gap-10 w-full h-full bg-light-background dark:bg-dark-background'>
         <Navbar />
-        <section className='flex justify-center items-center w-full'>
+        <section className='flex justify-center items-center w-full pt-10'>
           <article className='flex items-center w-11/12'>
             <div className='flex flex-col gap-10 w-2/3'>
                 <TextBlock

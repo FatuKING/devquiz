@@ -13,7 +13,7 @@ export function Ranking () {
     <>
       <main className='flex flex-col gap-10 w-full h-full bg-light-background dark:bg-dark-background'>
         <Navbar />
-        <section className='flex justify-center items-center w-full'>
+        <section className='flex justify-center items-center w-full pt-10'>
           <div className='flex gap-20 w-11/12'>
             <article className='flex flex-col gap-2 dark:text-dark-text text-light-text w-1/2'>
               <div className='flex justify-between'>

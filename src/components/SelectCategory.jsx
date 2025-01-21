@@ -1,31 +1,32 @@
 import { CardCategory } from './CardCategory'
 import { FaPaintbrush, FaCode, FaDatabase } from 'react-icons/fa6'
+import { TextBlock } from './TextBlock'
+
 
 export function SelectCategory () {
   return (
     <>
       <div className='flex flex-col gap-10 w-full'>
-        <h3 className='text-2xl md:text-3xl text-light-title font-medium dark:text-dark-title'>
-          Elija una categoría para comenzar
-        </h3>
-        <div className='overflow-x-auto overflow-y-hidden h-[410px]'>
-          <div className='flex justify-between scrollbar-hide whitespace-pre lg:w-full w-[900px]'>
-            <CardCategory
+        <TextBlock 
+        title='Selecciona una categoría para comenzar'
+        text='Cada categoria cuenta con 20 preguntas multiple choice'/>
+    
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
+          <CardCategory
               category='Ciencia de datos'
               description='Descubre el poder de los datos'
               icon={<FaDatabase />}
             />
-            <CardCategory
+          <CardCategory
               category='Programación'
               description='Desafía tu lógica y habilidades de codificación'
               icon={<FaCode />}
             />
-            <CardCategory
+          <CardCategory
               category='Diseño web'
               description='Explora los fundamentos del diseño web'
               icon={<FaPaintbrush />}
             />
-          </div>
         </div>
       </div>
     </>
