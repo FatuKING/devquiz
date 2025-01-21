@@ -18,8 +18,8 @@ export const theme = {
       },
       light: {
         paragraph: '#2b2c34',
-        background: '#fffffe',
-        bgSecondary: '#d1d1e9',
+        background: '#f2f4f6',
+        bgSecondary: '#fffffe',
         title: '#2b2c34',
         button: '#6246ea',
         buttonText: '#fffffe'
