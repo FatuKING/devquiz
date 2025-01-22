@@ -8,9 +8,9 @@ export function Ladding () {
     <>
       <main className='flex flex-col gap-10 w-full h-full bg-light-background dark:bg-dark-background'>
         <Navbar />
-        <section className='flex justify-center items-center w-full pt-10'>
+        <section className='flex justify-center items-center w-full 2xl:pt-10'>
           <article className='flex items-center w-11/12'>
-            <div className='flex flex-col gap-10 w-2/3'>
+            <div className='flex flex-col gap-6 2xl:gap-10 w-2/3'>
                 <TextBlock
                   title='Desafía y Mejora tus Conocimientos'
                   text='DevQuiz es un juego interactivo de preguntas y respuestas diseñado para que desarrolladores de todos los niveles puedan aprender y mejorar sus habilidades de una manera divertida. Con preguntas sobre diversos temas de desarrollo, tendrás la oportunidad de desafiar tus conocimientos mientras juegas y aprendes.'
@@ -26,7 +26,7 @@ export function Ladding () {
 
               <Link
                 to='/game'
-                className='text-light-buttonText dark:text-dark-buttonText bg-light-button dark:bg-dark-button rounded p-1 md:p-2 w-40 text-center font-semibold text-lg md:text-xl'
+                className='text-light-buttonText dark:text-dark-buttonText bg-light-button dark:bg-dark-button rounded p-1 md:p-2 w-40 text-center md:text-base 2xl:text-xl'
               >
                 Empieza Ahora
               </Link>

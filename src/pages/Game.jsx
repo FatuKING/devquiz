@@ -12,7 +12,7 @@ export function Game () {
     <>
       <main className='flex flex-col gap-10 w-full h-full bg-light-background dark:bg-dark-background'>
         <Navbar />
-        <section className='flex justify-center items-center w-full pt-10'>
+        <section className='flex justify-center items-center w-full 2xl:pt-10'>
           <article className='flex justify-center items-center w-11/12'>
             {gameStarted ? <Question /> : <SelectCategory />}
             {gameOver ? <ModalGameOver /> : null}
