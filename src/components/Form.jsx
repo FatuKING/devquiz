@@ -10,7 +10,7 @@ export function Form () {
         <form action='' className='flex flex-col gap-4 text-light-text dark:text-dark-text'>
           <div className='flex flex-col gap-4 text-lg 2xl:text-xl text-light-title dark:text-dark-title'>
             <label className='flex flex-col gap-2' htmlFor=''>
-              <input className='p-2 rounded dark:text-dark-text text-light-text bg-light-bgSecondary dark:bg-dark-card focus:outline-none border border-light-bgSecondary dark:border-dark-bgSecondary placeholder:text-gray-500' placeholder='Nombre completo' type='text' />
+              <input className='w-96 p-2 rounded dark:text-dark-text text-light-text bg-light-bgSecondary dark:bg-dark-card focus:outline-none border border-light-bgSecondary dark:border-dark-bgSecondary placeholder:text-gray-500' placeholder='Nombre completo' type='text' />
             </label>
 
             <label className='flex flex-col gap-2' htmlFor=''>

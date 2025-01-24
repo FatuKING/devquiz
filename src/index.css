@@ -58,3 +58,25 @@ body {
     position: absolute;
   }
 }
+
+/* Estilo para el contenedor scrollbar */
+.scrollbar-custom::-webkit-scrollbar {
+  width: 9px;
+}
+
+/* Estilo para el track (fondo del scrollbar) */
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: transparent; 
+  border-radius: 6px;
+}
+
+/* Estilo para el thumb (deslizador del scrollbar) */
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #4a5568, #2d3748); /* Gradiente */
+  border-radius: 6px;
+}
+
+/* Opcional: Hover en el thumb */
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #718096, #4a5568); /* Gradiente más claro */
+}
