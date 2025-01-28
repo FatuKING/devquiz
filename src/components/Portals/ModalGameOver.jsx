@@ -1,14 +1,17 @@
 import { createPortal } from 'react-dom'
 import { useThemes } from '../../hooks/useThemes'
 import { useQuiz } from '../../hooks/useQuiz'
+import { FaArrowLeft } from "react-icons/fa"
 
 export function ModalGameOver () {
   const { darkMode } = useThemes()
   const { correctQuestion, currentCategory, time, resetGame } = useQuiz()
 
-  const usedTime = (300 - time)
-  const prueba = 1 - ((usedTime / 60) / 10)
-  const points = Math.ceil(correctQuestion * 50000 * prueba)
+  const usedTime = 300 - time
+  const bonusTime = time * 25
+  const bonusHit = correctQuestion * 5000
+  const penalty = (20 - correctQuestion) * 500 
+  const points = bonusTime + bonusHit - penalty
 
   const minutos = Math.floor(usedTime / 60)
   const segundos = usedTime % 60
@@ -23,47 +26,51 @@ export function ModalGameOver () {
 
   return createPortal(
     <>
-      <main className={`${darkMode ? '' : 'dark'} w-screen h-screen absolute`}>
-        <div className='w-full h-full bg-gradient-to-r from-slate-200 to-slate-300 dark:from-slate-900 dark:to-slate-950 flex items-center justify-center text-light-text dark:text-dark-text'>
-          <article className='flex flex-col'>
-            <section className='flex flex-col gap-8 items-center text-2xl p-4 rounded'>
+      <main className={`${darkMode ? '' : 'dark'} w-screen h-screen absolute `}>
+        <div className='w-full h-full text-light-title dark:text-dark-title bg-light-background dark:bg-dark-background flex items-center justify-center text-light-text dark:text-dark-text'>
+          <article className='flex flex-col bg-light-bgSecondary dark:bg-dark-bgSecondary p-4 rounded-lg gap-4 w-1/4'>
+            <section className='flex flex-col gap-8 items-center text-2xl p-4 rounded relative'>
+        
+              <button onClick={resetGame} className='absolute left-4 top-6 text-lg'>  
+              <FaArrowLeft></FaArrowLeft>
+              </button>
 
-              <h4 className='text-5xl'>Game Over</h4>
+              <h4 className='text-3xl'>Game Over</h4>
 
-              <ul className='flex gap-8 w-full text-3xl'>
-                <li className='flex gap-2'>
-                  Categoria:
-                  <span className='text-purple-500'>{currentCategory}</span>
+              <ul className='flex flex-col gap-4 w-full text-lg 2xl:text-xl text-light-paragraph dark:text-dark-paragraph'>
+                <li className='flex justify-between'>
+                  Categoría:
+                  <span className='text-light-button dark:text-dark-button'>{currentCategory}</span>
                 </li>
 
-                <li className='flex gap-2'>
+                <li className='flex justify-between'>
                   Aciertos:
                   <span className={styleSuccesses}>{correctQuestion}</span>
                 </li>
 
-                <li className='flex gap-2'>
+                <li className='flex justify-between'>
                   Tiempo:
                   <span className={styleTime}>{`${String(minutos).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`}</span>
                 </li>
               </ul>
 
-              <ul className='flex flex-col justify-center items-center text-3xl'>
-                <li>
+              <ul className='flex flex-col justify-center items-center gap-2'>
+                <li className='text-light-paragraph dark:text-dark-paragraph text-lg 2xl:text-xl font-medium'>
                   Puntuación
                 </li>
 
-                <li className='text-5xl'>
-                  {points}
+                <li className='text-5xl font-semibold'>
+                  {points > 0 ? points.toLocaleString('es-ES') : 0}
                 </li>
               </ul>
             </section>
 
-            <form action='' className='text-2xl pt-4'>
-              <label htmlFor='' className='col-span-4'>
-                <input className='p-2 w-2/3 bg-white/30 dark:bg-black/30 focus:outline-none' type='text' placeholder='Nombre de usuarios' />
+            <form action='' className='flex flex-col gap-3 w-full'>
+              <label htmlFor='' className=''>
+                <input className='p-3 bg-light-background dark:bg-dark-background focus:outline-none rounded w-full' type='text' placeholder='Nombre de usuarios' />
               </label>
 
-              <button className='p-2 w-1/3 uppercase bg-purple-700' type='submit'>
+              <button className='p-3 uppercase bg-light-button dark:bg-dark-button text-light-buttonText dark:text-dark-buttonText rounded' type='submit'>
                 Registar
               </button>
             </form>

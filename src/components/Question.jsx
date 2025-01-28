@@ -10,21 +10,21 @@ export function Question () {
       {loading
         ? <Loading />
 
-        : <article className='relative w-2/3 h-96 text-light-text dark:text-dark-text'>
+        : <article className='w-full flex flex-col gap-20 2xl:gap-40'>
           <section className='flex justify-between items-center'>
-            <h3 className='text-4xl font-semibold text-purple-500'><span className='text-3xl text-light-text dark:text-dark-text bg-purple-500 dark:bg-purple-800 px-2 rounded-full'>{indexCurrentQuestion + 1}</span> {currentQuestion.question}</h3>
+            <h3 className='text-2xl 2xl:text-3xl font-semibold text-light-title dark:text-dark-title'><span className='text-3xl 2xl:text-4xl text-light-buttonText dark:text-dark-buttonText bg-light-button dark:bg-dark-button px-2 rounded-full'>{indexCurrentQuestion + 1}</span> {currentQuestion.question}</h3>
 
             <Chronometer />
           </section>
-          <section className='grid grid-cols-2 gap-6 pt-32'>
+          <section className='grid grid-cols-2 gap-6'>
             {currentQuestion.options.map((option, index) => (
               <button
                 key={index}
                 onClick={() => checkAnswer(option)}
-                className={`rounded-xl p-2 h-16 text-xl 
+                className={`flex justify-center items-center rounded-full p-2 h-16 text-lg font-medium 
                 ${selectedOption === option && isCorrect === true ? 'bg-emerald-500 dark:bg-emerald-800' : ''}
                 ${selectedOption === option && isCorrect === false ? 'bg-red-500 dark:bg-red-800' : ''}
-                ${selectedOption !== option ? 'bg-white/30 dark:bg-black/30 focus:outline-none shadow-sm shadow-black dark:shadow-purple-800 hover:border border-black dark:border-purple-800' : ''}`}
+                ${selectedOption !== option ? 'bg-light-bgSecondary dark:bg-dark-bgSecondary focus:outline-none text-light-paragraph dark:text-dark-buttonText hover:font-semibold hover:border border-light-button dark:border-dark-button' : ''}`}
               >{option}
               </button>
             ))}

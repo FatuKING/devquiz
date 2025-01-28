@@ -26,7 +26,7 @@ export function Chronometer () {
   const segundos = time % 60
 
   return (
-    <div className='text-3xl'>
+    <div className='text-2xl 2xl:text-3xl text-light-title dark:text-dark-title'>
       {`${String(minutos).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`}
     </div>
   )

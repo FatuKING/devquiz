@@ -57,7 +57,7 @@ export const useQuiz = create((set, get) => ({
       } else {
         setTimeout(() => {
           nextQuiz()
-        }, 1000)
+        }, 500)
       }
     } else {
       set({ selectedOption: option, isCorrect: false })
@@ -67,7 +67,7 @@ export const useQuiz = create((set, get) => ({
       } else {
         setTimeout(() => {
           nextQuiz()
-        }, 2000)
+        }, 500)
       }
     }
   },
