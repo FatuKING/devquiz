@@ -28,7 +28,6 @@ jobs:
           server: ${{ secrets.FTP__HOST }}
           username: ${{ secrets.FTP__USERNAME }} 
           password: ${{ secrets.FTP__PASSWORD }}
-          protocol: ftps
           local-dir: ./dist/
           server-dir: ./ 
           log-level: verbose 
